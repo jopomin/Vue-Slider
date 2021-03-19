@@ -13,7 +13,22 @@
 </head>
 <body>
     <div id="root">
-        
+        <div class="container">
+            <div class="wrapper">
+                <div class="prev" @click="prPic">
+                    <i class="fas fa-chevron-left"></i>
+                </div>
+                <div class="slider">
+                    <img :src="pics[counter]" alt="sunset">
+                </div>
+                <div class="next" @click="nxPic">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="dots">
+                    <i :class="(i == counter)?'active':null" v-for="(pic, i) in pics" class="fas fa-circle"></i>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
     <script src="js/main.js"></script>
