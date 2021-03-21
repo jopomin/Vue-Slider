@@ -10,6 +10,12 @@ var app = new Vue({
             "img/sun5.jpg"
         ]
     },
+    created: function () {
+        setInterval(() => {
+            this.nxPic();
+        }, 3000);
+
+    },
     methods: {
         prPic: function() {
             this.counter --;
