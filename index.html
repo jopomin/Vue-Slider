@@ -25,7 +25,7 @@
                     <i class="fas fa-chevron-right"></i>
                 </div>
                 <div class="dots">
-                    <i :class="(i == counter)?'active':null" v-for="(pic, i) in pics" class="fas fa-circle"></i>
+                    <i :class="(i == counter)?'active':null" v-for="(pic, i) in pics" class="fas fa-circle" @click="changeDot(i)"></i>
                 </div>
             </div>
         </div>
